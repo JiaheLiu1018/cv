@@ -1,0 +1,128 @@
+html{
+
+}
+
+body {
+  margin: 40px;
+  font-family:Georgia, 'Times New Roman', Times, serif
+  
+
+}
+
+.wrapper{
+  max-width: 800px;
+  margin: auto;
+}
+
+.content {
+  display: grid;
+  column-gap: 20px;
+    row-gap: 20px;
+  grid-template-columns: 1fr;
+  grid-template-rows:100px 1fr auto;
+  grid-template-areas:
+    "head"
+    "side"
+    "main"
+    "foot";
+}
+
+h1{
+  font-size: 26px;
+  color: rgb(22, 141, 107);
+}
+
+@media only screen and (min-width: 1000px) {
+  h1{
+    font-size: 36px;
+  }
+  
+  .content {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "head head head"
+      "side main main"
+      "foot foot foot";
+  }
+}
+
+.box{
+  background-color: #83e9af;
+  border-radius: 20px;
+  border:2px solid rgb(48, 149, 100);
+  padding: 50px;
+}
+
+.head {
+  grid-area: head;
+  text-align: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Reggae One', cursive;
+}
+
+.sidebar{
+  grid-area: side;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.personalimage{
+  grid-area: side;
+}
+
+.personalimage img{
+  max-width: 150px;
+  border: 2px solid;
+  border-radius: 20px;
+}
+
+.personaldetailitem{
+  font-size: 16x;
+  font-weight: 700;
+  padding: 15px 10px 20px 5px;
+  color: rgb(16, 129, 91);
+  
+}
+
+
+.experience{
+  grid-area: main;
+  color: rgb(18, 114, 112);
+  font-family: 'Reggae One', cursive;
+}
+
+.experienceitem{
+  margin: 10px 60px 10px 60px;
+  font-family: 'Reggae One', cursive;
+}
+
+.experienceheader{
+  margin-bottom: 10px;
+}
+
+.experiencedate{
+  background-color: rgb(55, 158, 86);
+  font-size: 16x;
+  border-radius: 20px;
+  padding: 5px 10px;
+  margin-right: 20px;
+  font-family: 'Reggae One', cursive;
+  
+}
+
+.experiencetitle{
+  font-size: 16x;
+  font-weight: 700;
+}
+
+.foot{
+  grid-area: foot;
+}
+
+img {
+  max-width: 300px;
+}
